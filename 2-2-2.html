@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Culos</title>
+    <link rel="stylesheet" href="boton.css">
+    <link rel="stylesheet" href="imagen.css">
+    <link rel="stylesheet" href="video.css">
+
+</head>
+
+<body onclick="iniciarReproduccion()">
+
+
+    <div class="catalogo" id="catalogo">
+        <div class="contenedor-tarjetas">
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Magik_Tile.webp" alt="1">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/MAGIK.jpg" width="200" height="300"       alt="3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-container">
+
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Cloak_Dagger_Tile.webp" alt="2">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/CLOACK.jpg" width="200" height="300"       alt="3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Emma_Frost_Tile.webp" alt="3">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/emma frost.jpg" width="200" height="300"       alt="3">
+                    </div>  
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Hela_Tile.webp" alt="4">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/hela.jpg" width="200" height="300"       alt="4">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Invisible_Woman_Tile.webp" alt="5">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/mujerInvicible.jpg" width="200" height="300"       alt="5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-tarjetas">
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Black_Widow_Tile.webp" alt="6">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/BlackWidow.jpg" width="200" height="300"       alt="6">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Luna_Snow_Tile.webp" alt="7">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/luna.jpg" width="200" height="300"       alt="3">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Peni_Parker_Tile.webp" alt="8">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/peny.jpg" width="200" height="300"       alt="3">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Psylocke_Title.webp" alt="9">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="HX/Psylocke.jpg" width="200" height="300"       alt="3">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="Heroes/Venom_Tile.webp" alt="10">
+                    </div>
+                    <div class="flip-card-back">
+                        r<img src="HX/venom.jpg" width="200" height="300"       alt="3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function mostrarCatalogo() {
+            
+            document.getElementById("catalogo").style.display = "flex";
+        }
+    </script>
+
+
+    <script>
+        function ocultarSuperpuesto() {
+            document.getElementById("superpuesto").style.display = "none";
+        }
+    </script>
+
+    <video autoplay muted loop playsinline>
+        <source src="U Got That  FULL VERSION [MMV].mp4" type="video/mp4">
+    </video>
+
+    <audio id="musicaFondo" loop>
+        <source src="Wisin y Yandel - Sexy Movimiento.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+        function iniciarReproduccion() {
+            document.getElementById('musicaFondo').play();
+            // Eliminar el evento para que no se repita
+            document.body.onclick = null;
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+
+/* Video en fondo */
+.video-background iframe,
+.video-background #player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none; /* El iframe no bloquea clics en elementos encima */
+}
+
+/* Contenedor del contenido encima del video */
+.contenido-superpuesto {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.contenido-superpuesto h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.contenido-superpuesto img {
+    width: 200px;
+    border: 4px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contenido-superpuesto {
+ 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton {
+    padding: 1em 2em;
+    background: #ff0000;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: black;
+}
+.boton-esquina {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #ff0000;
+color: white;
+border: none;
+padding: 1em 2em;
+font-size: 1.1em;
+border-radius: 8px;
+cursor: pointer;
+z-index: 2;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+transition: background 0.3s;
+top: 0.5px; right: 10px;
+}
+
+.boton-esquina:hover {
+background: #cc0000;
+}

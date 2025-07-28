@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Culos</title>
+    <link rel="stylesheet" href="boton.css">
+    <link rel="stylesheet" href="imagen.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="menuBtns.css">
+
+</head>
+
+<body onclick="iniciarReproduccion()">
+    <center>
+        <div class="nav-buttons">
+            <a onclick="mostrarMensaje('Bienvenido al inicio')">Inicio</a>
+            <a onclick="mostrarMensaje('Contenido con acción')">Acción</a>
+            <a onclick="mostrarMensaje('Contácta a David para mas información')">Contacto</a>
+        </div>
+    </center>
+    <div id="overlay" onclick="cerrarMensaje()"></div>
+
+    <!-- Ventana de mensaje -->
+    <div id="mensajeModal"></div>
+  
+    <script>
+      function mostrarMensaje(texto) {
+        const modal = document.getElementById('mensajeModal');
+        const overlay = document.getElementById('overlay');
+        modal.textContent = texto;
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+      }
+  
+      function cerrarMensaje() {
+        document.getElementById('mensajeModal').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+      }
+    </script>
+
+
+    <center>
+        <div class="contenido-superpuesto" id="superpuesto">
+            <h1>Bienvenido</h1>
+            <center>
+                <a href="2-2-2.html"><img src="https://i.ytimg.com/vi/7Z6CbgFjuqo/mqdefault.jpg" alt="Imagen"
+                        width="400" onclick="ocultarSuperpuesto()" style="cursor: pointer;" onclick="mostrarCatalogo()">
+                </a>
+
+
+            </center>
+        </div>
+    </center>
+
+
+
+    <script>
+        function mostrarCatalogo() {
+
+            document.getElementById("catalogo").style.display = "flex";
+        }
+    </script>
+
+
+    <script>
+        function ocultarSuperpuesto() {
+            document.getElementById("superpuesto").style.display = "none";
+        }
+    </script>
+
+    <video autoplay muted loop playsinline>
+        <source src="U Got That  FULL VERSION [MMV].mp4" type="video/mp4">
+    </video>
+
+    <audio id="musicaFondo" loop>
+        <source src="Daddy Yankee - Pose.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+        function iniciarReproduccion() {
+            document.getElementById('musicaFondo').play();
+            // Eliminar el evento para que no se repita
+            document.body.onclick = null;
+        }
+    </script>
+
+
+</body>
+
+</html>

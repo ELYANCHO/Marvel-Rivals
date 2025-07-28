@@ -1,0 +1,69 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* 👈 coloca todo uno debajo del otro */
+    align-items: center;     /* 👈 centra horizontalmente */
+    padding: 40px 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 50px ;
+    margin-bottom: 30px; /* 👈 espacio debajo de los botones */
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #24272c;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.nav-buttons a:hover {
+    background-color: #4c4e50;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.titulo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* Estilo para el mensaje tipo ventana */
+#mensajeModal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px 30px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Fondo semitransparente para detectar clic fuera */
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
